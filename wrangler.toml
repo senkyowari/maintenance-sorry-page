@@ -1,0 +1,10 @@
+name = "maintenance-sorry-page"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+routes = [{ pattern = "maintenance-sorry.senkyowari.com/*", zone_name = "senkyowari.com" }]
+
+# 画像を ArrayBuffer として Worker に同梱する（*.html はデフォルトで文字列として読み込まれる）
+[[rules]]
+type = "Data"
+globs = ["**/*.png"]
+fallthrough = true
